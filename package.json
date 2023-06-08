@@ -9,6 +9,8 @@
   "author": "Emilio Ortiz <ortizemilio.dev@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2"
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "mongodb": "^5.6.0"
   }
 }
