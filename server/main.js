@@ -3,8 +3,8 @@ const bodyParser = require('body-parser');
 const { connectToMongo } = require('./database/connectToMongo');
 const { registerUser } = require('./auth/register');
 const { loginUser } = require('./auth/login');
-const User = require('./models/user');
-const Task = require('./models/task');
+const User = require('./database/models/user');
+const Task = require('./database/models/task');
 const app = express();
 const port = 3000;
 
