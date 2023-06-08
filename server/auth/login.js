@@ -1,6 +1,7 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
+require('dotenv').config();
 
 const loginUser = async (req, res) => {
     try {
@@ -22,8 +23,8 @@ const loginUser = async (req, res) => {
         res.json({ token }); //return token
     } catch (err) {
         console.error(err);
-        res.status(500).json({error: message.err});
+        res.status(500).json({ error: "Something went wrong" });
     }
 };
 
-module.export = loginUser;
+module.exports = { loginUser };
