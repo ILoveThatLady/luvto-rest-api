@@ -3,6 +3,10 @@ const bodyParser = require('body-parser');
 const { connectToMongo } = require('./database/connectToMongo');
 const { registerUser } = require('./auth/register');
 const { loginUser } = require('./auth/login');
+const { createTask } = require('./handlers/createTask');
+const { updateTask } = require('./handlers/updateTask');
+const { deleteTask } = require('./handlers/deleteTask');
+const { getAllTasks } = require('./handlers/getAllTasks');
 const User = require('./database/models/user');
 const Task = require('./database/models/task');
 const app = express();
@@ -15,6 +19,10 @@ connectToMongo();
 
 app.post('/register', registerUser);
 app.post('/login', loginUser);
+app.post('/tasks/:userId', createTask);
+app.put('/tasks/:taskId', updateTask);
+app.delete('/tasks/:taskId', deleteTask);
+app.get('/tasks', getAllTasks);
 
 app.get("/", (req, res) => {
     res.send("Hello friend, welcome to luvto!");
