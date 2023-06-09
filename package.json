@@ -2,6 +2,7 @@
   "name": "luvto-backend",
   "version": "1.0.0",
   "description": "RESTful API for LuvTo Web App",
+  "keywords": ["luvto", "API", "web", "web-programming", "RESTful"],
   "main": "main.js",
   "scripts": {
     "test": "jest"
