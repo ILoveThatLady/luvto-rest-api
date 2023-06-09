@@ -28,7 +28,7 @@ Run the server
 node server/main.js
 ```
 
-This will start the server en http://localhost:3000
+This will start the server in http://localhost:3000
 
 ## Connect to MongoDB
 
